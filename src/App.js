@@ -8,12 +8,12 @@ class App extends Component {
       <div className="App">
         <h1>Hello</h1>
         <Toggle>
-          ({on, toggle}) => (
-          <div>
-            {on && <h1>Show Me</h1>}
-            <button onClick={toggle}>Show / Hide</button>
-          </div>
-          )
+          {({ on, toggle }) => (
+            <div>
+              {on && <h1>Show Me</h1>}
+              <button onClick={toggle}>Show / Hide</button>
+            </div>
+          )}
         </Toggle>
       </div>
     )
