@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Toggle render={({ on, toggle }) => (
           <div>
             {on && <h1>Show Me</h1>}
