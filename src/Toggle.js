@@ -10,13 +10,11 @@ export default class Toggle extends Component {
       on: !this.state.on
     })
   }
+
   render() {
     return (
       <div>
-        {
-          this.state.on && <h1>ToggleMe</h1>
-        }
-        <button onClick={this.toggle}>Show/Hide</button>
+        <button>Show/Hide</button>
       </div>
     )
   }
