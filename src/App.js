@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Toggle from './ToggleRenderPropChildren';
-import Portal from './Portal';
+
 import Modal from './Modal';
 
 
