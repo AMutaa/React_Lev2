@@ -11,8 +11,10 @@ export default class Modal extends Component {
       <Portal>
         {on &&
           <ModalWrapper>
-            <button onClick={toggle}>Close</button>
-            <div>{children}</div>
+            <ModalWindow>
+              <CloseButton onClick={toggle}>Close</CloseButton>
+              <div>{children}</div>
+            </ModalWindow>
           </ModalWrapper>
         }
       </Portal>
@@ -30,4 +32,14 @@ background:teal;
 display:flex;
 justify-content:center;
 align-items:center;
+`;
+
+const ModalWindow = styled.div`
+position:relative
+`;
+
+const CloseButton = styled.button`
+position:absolute;
+top:0;
+right:0;
 `;
