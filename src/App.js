@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Toggle from './ToggleRenderPropChildren';
 
 
@@ -11,10 +11,10 @@ class App extends Component {
         <Toggle>
           {
             ({ on, toggle }) => (
-              <div>
+              <Fragment>
                 {on && <h1>Show Me</h1>}
-                <button onClick={toggle}>Show/Hide</button>
-              </div>
+                < button onClick={toggle}>Show/Hide</button>
+              </Fragment>
             )}
         </Toggle>
       </div >
