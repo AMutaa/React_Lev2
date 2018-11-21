@@ -1,6 +1,6 @@
-import React from 'react'
+import { Component } from 'react'
 
-export default class ToggleRenderPropChildren extends React.Component {
+export default class ToggleRenderPropChildren extends Component {
   state = {
     on: false
   }
