@@ -54,6 +54,7 @@ right:0;
 border:none;
 background:transparent;
 padding:10px;
+outline:none;
 `;
 
 const Background = styled.div`
