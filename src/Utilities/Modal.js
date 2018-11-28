@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Portal from './Portal';
-import Icon from './Icon'
+
+import { Icon, Portal } from 'Utilities'
+import { Card } from 'Elements'
 
 export default class Modal extends Component {
   render() {
