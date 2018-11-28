@@ -6,6 +6,7 @@ export default class Icon extends Component {
   }
 
   render() {
+    // eslint-disable-next-line
     switch (this.props.name) {
       case 'close':
         return (
