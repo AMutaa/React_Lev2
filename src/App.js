@@ -2,36 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Toggle } from 'Utilities';
 import { Modal } from 'Elements';
 import './App.css';
-import User from './User'
-import { UserContext } from './UserContext'
+import User from './User';
+import UserProvider from './UserProvider';
 
-
-class UserProvider extends Component {
-  state = {
-    id: '123',
-    name: 'Adam',
-    email: 'amutaa08@gmail.com'
-  }
-
-  logout = () => {
-    this.setState({
-      id: null,
-      name: '',
-      email: ''
-    })
-  }
-  render() {
-    return (
-      <UserContext.Provider
-        value={{
-          user: this.state,
-          logout: this.logout
-        }}>
-        {this.props.children}
-      </UserContext.Provider >
-    )
-  }
-}
 
 class App extends Component {
   render() {
@@ -39,6 +12,17 @@ class App extends Component {
       <UserProvider>
         <div className="App">
           <User />
+          <section>
+            <Toggle>
+              {
+                ({ on, toggle }) => (
+                  <Fragment>
+                    <button onClick={toggle}>Show/Hide</button>
+                    {on && <h1>Show Me</h1>}
+                  </Fragment>
+                )}
+            </Toggle>
+          </section>
           <Toggle>
             {
               ({ on, toggle }) => (
