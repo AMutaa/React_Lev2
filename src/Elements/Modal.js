@@ -18,15 +18,15 @@ export default class Modal extends Component {
           enter={{ opacity: 0 }}
           leave={{ opacity: 0 }}
         >
-          {on &&
+          {on && (())
             (
-              <ModalWrapper>
-                <ModalCard>
-                  <CloseButton onClick={toggle}><Icon name="close" /></CloseButton>
-                  <div>{children}</div>
-                </ModalCard>
-                <Background onClick={toggle} />
-              </ModalWrapper>
+            <ModalWrapper>
+              <ModalCard>
+                <CloseButton onClick={toggle}><Icon name="close" /></CloseButton>
+                <div>{children}</div>
+              </ModalCard>
+              <Background onClick={toggle} />
+            </ModalWrapper>
             )
           }
         </Transition>
