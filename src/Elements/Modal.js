@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Transition } from 'react-spring'
 import styled from 'styled-components';
 import { Portal, absolute } from 'Utilities';
 import Icon from './Icon';
 import { Card } from './Cards';
+
+
 
 
 export default class Modal extends Component {
@@ -10,17 +13,23 @@ export default class Modal extends Component {
     const { children, on, toggle } = this.props
     return (
       <Portal>
-        {on &&
-          (
-            <ModalWrapper>
-              <ModalCard>
-                <CloseButton onClick={toggle}><Icon name="close" /></CloseButton>
-                <div>{children}</div>
-              </ModalCard>
-              <Background onClick={toggle} />
-            </ModalWrapper>
-          )
-        }
+        <Transition
+          from={{ opacity: 0 }}
+          enter={{ opacity: 0 }}
+          leave={{ opacity: 0 }}
+        >
+          {on &&
+            (
+              <ModalWrapper>
+                <ModalCard>
+                  <CloseButton onClick={toggle}><Icon name="close" /></CloseButton>
+                  <div>{children}</div>
+                </ModalCard>
+                <Background onClick={toggle} />
+              </ModalWrapper>
+            )
+          }
+        </Transition>
       </Portal>
     )
   }
