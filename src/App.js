@@ -1,12 +1,12 @@
-import React, { Component, Fragment, createContext } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Toggle } from 'Utilities';
 import { Modal } from 'Elements';
 import './App.css';
+import User from './User'
+import { UserContext } from './UserContext'
 
-const UserContext = createContext();
 
 class UserProvider extends Component {
-
   state = {
     id: '123',
     name: 'Adam',
@@ -29,6 +29,7 @@ class App extends Component {
     return (
       <UserProvider>
         <div className="App">
+          <User />
           <Toggle>
             {
               ({ on, toggle }) => (
