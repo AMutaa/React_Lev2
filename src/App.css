@@ -8,10 +8,9 @@
 }
 
 button {
-  width: 100px;
+  width: auto;
   height: 30px;
   border-radius: 4px;
   font-size: 15px;
-  margin: 10px 0;
-
+  margin-bottom: 5px;
 }
