@@ -4,6 +4,7 @@ import { Modal } from 'Elements';
 import './App.css';
 import User from './User';
 import UserProvider from './UserProvider';
+import Drag from './Drag';
 
 
 class App extends Component {
@@ -11,18 +12,7 @@ class App extends Component {
     return (
       <UserProvider>
         <div className="App">
-          <User />
-          <section>
-            <Toggle>
-              {
-                ({ on, toggle }) => (
-                  <Fragment>
-                    <button onClick={toggle}>Show/Hide</button>
-                    {on && <h1>Show Me</h1>}
-                  </Fragment>
-                )}
-            </Toggle>
-          </section>
+          <Drag />
           <Toggle>
             {
               ({ on, toggle }) => (
