@@ -13,13 +13,8 @@ export default class Modal extends Component {
     const { children, on, toggle } = this.props
     return (
       <Portal>
-        <Transition
-          from={{ opacity: 0 }}
-          enter={{ opacity: 0 }}
-          leave={{ opacity: 0 }}
-        >
-          {on && (())
-            (
+        {on &&
+          (
             <ModalWrapper>
               <ModalCard>
                 <CloseButton onClick={toggle}><Icon name="close" /></CloseButton>
@@ -27,10 +22,9 @@ export default class Modal extends Component {
               </ModalCard>
               <Background onClick={toggle} />
             </ModalWrapper>
-            )
-          }
-        </Transition>
-      </Portal>
+          )
+        }
+      </Portal >
     )
   }
 }
