@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card } from 'Elements'
+import { Card } from 'Elements/Cards'
 
 export default class Drag extends Component {
   render() {
